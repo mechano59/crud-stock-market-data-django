@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Market Data</title>
+</head>
+<body>
+    <h1>Stock Market Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Trade Code</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Open</th>
+                <th>Close</th>
+                <th>Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in stock_data %}
+            <tr>
+                <td>{{ data.date }}</td>
+                <td>{{ data.trade_code }}</td>
+                <td>{{ data.high }}</td>
+                <td>{{ data.low }}</td>
+                <td>{{ data.open }}</td>
+                <td>{{ data.close }}</td>
+                <td>{{ data.volume }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
