@@ -11,3 +11,18 @@ class JSONData(models.Model):
 
     def __str__(self):
         return self.trade_code
+
+class Stock(models.Model):
+    date = models.DateField()
+    trade_code = models.CharField(max_length=20)
+    high = models.FloatField()
+    low = models.FloatField()
+    open = models.FloatField()
+    close = models.FloatField()
+    volume = models.IntegerField()
+
+    def __str__(self):
+        return self.trade_code
+    
+    class Meta:
+        app_label = 'market_app'

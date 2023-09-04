@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stock Market Data</title>
+    <style>
+        table {width: 100%;border-collapse: collapse;}th, td, tr {text-align: center; }thead {background-color: #333;color: #fff;}th {font-weight: bold;}tbody tr:nth-child(even) {background-color: #f2f2f2;}tbody tr:hover {background-color: #ddd;}a {text-decoration: none;color: #000000;margin: 0 5px;}a:hover {text-decoration: none;}
+    </style>
+    <script src="https://kit.fontawesome.com/39dd537968.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a href="{% url 'market_app:json_data_list' %}" class="navbar-brand mx-auto"><img src="https://i.ibb.co/s5FfCy3/1693777512767-removebg-preview.png" width="160" height="80"></a>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+        <main class="container">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+  <footer class="footer">
+    <div class="container">
+        &copy; {{ year }} Janata Wifi. All rights reserved.
+    </div>
+</footer>
+</html>

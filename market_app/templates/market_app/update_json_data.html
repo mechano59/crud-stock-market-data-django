@@ -1,0 +1,12 @@
+<!-- market_app/templates/market_app/update_json_data.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Edit JSON Data</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Changes</button>
+</form>
+<a href="{% url 'market_app:json_data_list' %}">Cancel</a>
+{% endblock %}

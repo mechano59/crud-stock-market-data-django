@@ -1,0 +1,12 @@
+<!-- market_app/templates/market_app/delete_json_data.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Delete JSON Data</h1>
+<p>Are you sure you want to delete "{{ data.trade_code }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+</form>
+<a href="{% url 'market_app:json_data_list' %}">Cancel</a>
+{% endblock %}

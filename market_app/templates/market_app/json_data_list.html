@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>JSON Data List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Trade Code</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Open</th>
+            <th>Close</th>
+            <th>Volume</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.date }}</td>
+            <td>{{ item.trade_code }}</td>
+            <td>{{ item.high }}</td>
+            <td>{{ item.low }}</td>
+            <td>{{ item.open }}</td>
+            <td>{{ item.close }}</td>
+            <td>{{ item.volume }}</td>
+            <td>
+                <a href="{% url 'market_app:update_json_data' item.pk %}"><i class="fa-solid fa-pen-to-square" style="color: #000000;"></i></a>
+                <a href="{% url 'market_app:delete_json_data' item.pk %}"><i class="fa-regular fa-trash-can" style="color: #000000;"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'market_app:create_json_data' %}" style="text-decoration: none;">Add New JSON Data</a>
+{% endblock %}
