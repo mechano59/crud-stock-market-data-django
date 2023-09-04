@@ -1,7 +1,5 @@
 # Stock Market Data
 
-# Stock Market Data Web App
-
 This is a Django web application for managing and visualizing stock market data. The app allows you to view, edit, and manage stock market data entries.
 
 ## Table of Contents
