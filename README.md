@@ -2,6 +2,8 @@
 
 This is a Django web application for managing and visualizing stock market data. The app allows you to view, edit, and manage stock market data entries.
 
+[Live Server](https://5plaban9.pythonanywhere.com)
+
 ## Table of Contents
 
 - [Features](#features)
